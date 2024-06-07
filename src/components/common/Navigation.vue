@@ -29,7 +29,8 @@
                 </li>
                 <li class="nav-item">
                     <RouterLink to="/customeroverview" class="nav-link" active-class="active"
-                        :class="{ disabled: !store.isLoggedIn || isActive != 'true'}" v-if="roles.includes('ROLE_EMPLOYEE')">
+                        :class="{ disabled: !store.isLoggedIn || isActive != 'true'}"
+                        v-if="roles && roles.includes('ROLE_EMPLOYEE')">
                         Customer Overview
                     </RouterLink>
                 </li>
@@ -40,8 +41,7 @@
                     </RouterLink>
                 </li>
                 <li class="nav-item">
-                    <RouterLink to="/" class="nav-link" active-class="active" v-if="store.isLoggedIn">Logout
-                    </RouterLink>
+                    <RouterLink to="/" class="nav-link" active-class="active" v-if="store.isLoggedIn" @click="handleLogout">Logout</RouterLink>
                     <RouterLink to="/" class="nav-link" active-class="active" v-else>Login</RouterLink>
                 </li>
             </ul>
@@ -56,7 +56,12 @@ export default {
     name: "Navigation",
     setup() {
         const store = userStore();
-        return { store };
+
+        const handleLogout = () => {
+            store.logout();
+        };
+
+        return { store,handleLogout };
     },
     data() {
         return {

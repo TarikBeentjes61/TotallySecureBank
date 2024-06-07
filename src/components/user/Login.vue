@@ -35,13 +35,7 @@ export default {
         login(username, password) {
             this.store.login(username, password)
                 .then(() => {
-                    if (window.location.pathname == "/atm/login") {
-                        window.location.href = "/atm/index"
-                    }
-                    else {
-                        window.location.href = "/index"
-                    }
-
+                    window.location.href = "/TotallySecureBank/atm/index"
                 })
                 .catch(error => {
                     console.log(error);
@@ -71,7 +65,7 @@ export default {
                                 v-model="password">
                         </div>
                         <div class="mb-3 form-check">
-                            <p>Don't have an account yet? <a href="/register">Register</a> here! </p>
+                            <p>Don't have an account yet? <a href="/TotallySecureBank/register">Register</a> here! </p>
                         </div>
                         <input type="button" class="btn btn-primary" value="Login" @click="login(username, password)" />
                     </form>

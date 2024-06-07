@@ -72,8 +72,6 @@ export default {
                this.errorMessage = '';
             })
             .catch(error => {
-               alert(error.response.data);
-               console.log(error);
                this.errorMessage = error.response.data;
             });
       },

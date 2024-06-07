@@ -54,6 +54,21 @@ export const userStore = defineStore('store', {
                 this.username = JSON.parse(username)
                 axios.defaults.headers.common['Authorization'] = "Bearer " + this.jwt
             }
+        },
+        logout() {
+            this.jwt = '';
+            this.username = '';
+            this.roles = [];
+            this.bankAccounts = [];
+            this.isActive = false;
+
+            localStorage.removeItem("jwt");
+            localStorage.removeItem("username");
+            localStorage.removeItem("roles");
+            localStorage.removeItem("bankAccounts");
+            localStorage.removeItem("isActive");
+
+            delete axios.defaults.headers.common['Authorization'];
         }
     },
 }
