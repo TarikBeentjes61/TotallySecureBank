@@ -61,7 +61,7 @@ export default {
     data() {
         return {
             isActive: JSON.parse(localStorage.getItem("isActive")),
-            roles: [],
+            roles: '',
         }
     },
     mounted() {
