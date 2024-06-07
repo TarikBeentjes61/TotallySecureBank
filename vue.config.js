@@ -1,8 +1,8 @@
-import { defineConfig } from 'vite'
+const { defineConfig } = require('@vue/cli-service')
 import vue from '@vitejs/plugin-vue'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: '/TotallySecureBank/',
+  publicPath: '/TotallySecureBank/',
   plugins: [vue()],
 })
