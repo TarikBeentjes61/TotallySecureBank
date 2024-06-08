@@ -24,8 +24,7 @@
                     </RouterLink>
                 </li>
                 <li class="nav-item">
-                    <RouterLink to="/atm/login" class="nav-link" active-class="active"
-                        :class="{ disabled: isActive != 'true'}">ATM</RouterLink>
+                    <RouterLink to="/atm/login" class="nav-link" active-class="active" :class="{ disabled: isActive != 'true'}">ATM</RouterLink>
                 </li>
                 <li class="nav-item">
                     <RouterLink to="/customeroverview" class="nav-link" active-class="active"

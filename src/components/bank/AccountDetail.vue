@@ -4,7 +4,6 @@
                 <h5 class="card-title">{{ account.accountType }}</h5>
                 <p class="card-text">Balance: {{account.balance }} </p>
                 <p class="card-text">Absolute Limit: {{ account.absoluteLimit }} </p>
-                <p class="card-text">Daily Limit: {{ account.dailyLimit }} </p>
             </div>
         </div>
 </template>
