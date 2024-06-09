@@ -33,21 +33,21 @@ export default {
     },
     methods: {
         login(username, password) {
+            const baseURL = "/TotallySecureBank";
+            console.log(window.location.pathname);
             this.store.login(username, password)
                 .then(() => {
-                    if (window.location.pathname == "/TotallySecureBank/atm/login") {
-                        window.location.href = "/TotallySecureBank/atm/index"
+                    if (window.location.pathname === `${baseURL}/atm/login`) {
+                        window.location.href = `${baseURL}/atm/index`;
+                    } else {
+                        window.location.href = `${baseURL}/index`;
                     }
-                    else {
-                        window.location.href = "/TotallySecureBank/index"
-                    }
-
                 })
                 .catch(error => {
                     console.log(error);
                     this.errorMessage = error.response.data;
-                })
-        }
+                });
+}
     }
 };
 </script>
