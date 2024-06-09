@@ -1,6 +1,7 @@
 <script>
 import Footer from './../common/Footer.vue';
 import { userStore } from "../../stores/store";
+import router from '@/Router.js';
 
 export default {
     name: "Index",

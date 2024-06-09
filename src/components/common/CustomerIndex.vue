@@ -30,34 +30,28 @@ export default {
 
         <div v-if="isActive == 'true'" class="row justify-content-center">
             <!-- Transaction -->
-            <div class="card col-2 m-2">
-                <a href="/bank/transfer">
-                    <img src="/images/transaction.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Transaction</h5>
-                    </div>
-                </a>
-            </div>
+            <router-link to="/bank/transfer" class="card col-2 m-2">
+                <img src="/images/transaction.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                <h5 class="card-title">Transaction</h5>
+                </div>
+            </router-link>
 
-            <div class="card col-2 m-2">
-                <!-- Transfer -->
-                <a href="/bank/transferhistory">
-                    <img src="/images/history.png" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">History</h5>
-                    </div>
-                </a>
-            </div>
+            <!-- Transfer -->
+            <router-link to="/bank/transferhistory" class="card col-2 m-2">
+                <img src="/images/history.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                <h5 class="card-title">History</h5>
+                </div>
+            </router-link>
 
             <!-- ATM -->
-            <div class="card col-2 m-2">
-                <a href="/atm/login">
-                    <img src="/images/atm.png" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">ATM</h5>
-                    </div>
-                </a>
-            </div>
+            <router-link to="/atm/login" class="card col-2 m-2">
+                <img src="/images/atm.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                <h5 class="card-title">ATM</h5>
+                </div>
+            </router-link>
         </div>
     </section>
     <Footer> </Footer>
