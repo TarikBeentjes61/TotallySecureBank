@@ -35,11 +35,12 @@ export default {
         login(username, password) {
             this.store.login(username, password)
                 .then(() => {
-                    if (window.location.pathname == "/atm/login") {
-                        window.location.href = "/atm/index"
+                    console.log(window.location.pathname);
+                    if (window.location.pathname == "/TotallySecureBank/atm/login") {
+                        window.location.href = "/TotallySecureBank/atm/index"
                     }
                     else {
-                        window.location.href = "/index"
+                        window.location.href = "/TotallySecureBank/index"
                     }
 
                 })
