@@ -20,7 +20,7 @@ import Account from './components/bank/BankAccount.vue'
 import ATMIndex from './components/atm/Index.vue'
 
 const router = createRouter({
-  history: createWebHistory(import.meta.env.BASE_URL),
+  history: createWebHistory('/TotallySecureBank/'),
   routes: [
     //Common routes
     { path: '/index', component: CustomerIndex },
