@@ -43,7 +43,7 @@ export default {
         },
         acceptUser(userId) {
             console.log(this.users);
-            axios.post('users/' + userId + '/activate', {
+            axios.put('users/' + userId + '/activate', {
                 headers: {
                     'Content-Type': 'application/json'
                 }
