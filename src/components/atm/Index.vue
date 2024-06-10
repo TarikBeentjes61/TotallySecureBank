@@ -36,11 +36,11 @@ export default {
                 transactionType: transactionType,
                 role: "ROLE_CUSTOMER"
             };
-            if (transactionType == 'WITHDRAWAL') {
+            if (transactionType === 'WITHDRAWAL') {
                 body.senderIban = this.BankAccount.iban;
                 body.receiverIban = this.AtmIBAN;
             }
-            if (transactionType == 'DEPOSIT') {
+            if (transactionType === 'DEPOSIT') {
                 body.senderIban = this.AtmIBAN;
                 body.receiverIban = this.BankAccount.iban;
             }
