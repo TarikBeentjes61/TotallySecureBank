@@ -99,7 +99,7 @@ export default {
                         </div>
                         <input type="button" class="btn btn-primary" value="Register" @click="Register()">
                         <div class="mb-2 form-check">
-                            <p>Already have an account? <router-link to="/register">Login</router-link> here! </p>
+                            <p>Already have an account? <router-link to="/">Login</router-link> here! </p>
                         </div>
                     </form>
                 </div>
