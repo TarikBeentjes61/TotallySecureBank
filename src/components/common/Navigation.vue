@@ -65,11 +65,12 @@ export default {
     data() {
         return {
             isActive: JSON.parse(localStorage.getItem("isActive")),
-            roles: '',
+            roles: []
         }
     },
     mounted() {
-        this.roles = JSON.parse(localStorage.getItem("roles"));
+        this.roles = JSON.parse(localStorage.getItems("roles"));
+        console.log(this.roles);
     }
 };
 </script>
