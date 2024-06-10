@@ -71,7 +71,7 @@ export default {
                                 v-model="password">
                         </div>
                         <div class="mb-3 form-check">
-                            <p>Don't have an account yet? <a href="/TotallySecureBank/register">Register</a> here! </p>
+                            <p>Don't have an account yet? <router-link to="/register">Register</router-link> here! </p>
                         </div>
                         <input type="button" class="btn btn-primary" value="Login" @click="login(username, password)" />
                     </form>
