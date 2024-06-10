@@ -70,7 +70,6 @@ export default {
     },
     mounted() {
         this.roles = JSON.parse(localStorage.getItems("roles"));
-        console.log(this.roles);
     }
 };
 </script>
