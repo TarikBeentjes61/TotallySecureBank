@@ -99,7 +99,7 @@ export default {
                         </div>
                         <input type="button" class="btn btn-primary" value="Register" @click="Register()">
                         <div class="mb-2 form-check">
-                            <p>Already have an account? <a href="/login">Login</a> here! </p>
+                            <p>Already have an account? <a href="/TotallySecureBank/login">Login</a> here! </p>
                         </div>
                     </form>
                 </div>
