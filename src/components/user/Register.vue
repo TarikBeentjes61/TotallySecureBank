@@ -44,7 +44,7 @@ export default {
                     .post('users', this.user)
                     .then(response => {
                         console.log(response);
-                        window.location.href = "/login";
+                        window.location.href = "/TotallySecureBank/login";
                     })
                     .catch(error => {
                         this.errorMessage = error.response.data;
