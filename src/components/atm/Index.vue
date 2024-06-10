@@ -36,7 +36,7 @@ export default {
                 transactionType: transactionType,
                 role: "ROLE_CUSTOMER"
             };
-            if (transactionType === "Withdraw") {
+            if (transactionType === "WITHDRAWAL") {
                 body.senderIban = this.BankAccount.iban;
                 body.receiverIban = this.AtmIBAN;
             } else { // Deposit
