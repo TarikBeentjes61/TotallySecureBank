@@ -19,15 +19,16 @@ export default {
                 amount: amount,
                 description: document.getElementById('description').value,
                 transactionType: transactionType,
-                role: "ROLE_CUSTOMER"
+                role: "ROLE_CUSTOMER",
+                errorMessage: ''
             };
             axios.post('transactions', body)
             .then(result => {
                 this.accounts = result.data;
-                console.log(result);
+                this.errorMessage = ''
             })
             .catch(error => {
-                console.log(error);
+                this.errorMessage = error.response.data;
             });
         }
     }

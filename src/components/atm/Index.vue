@@ -57,7 +57,6 @@ export default {
                         this.errorMessage = ''
                     }
                 }).catch(error => {
-                    console.log(error);
                     this.errorMessage = error.response.data;
                 });
         }

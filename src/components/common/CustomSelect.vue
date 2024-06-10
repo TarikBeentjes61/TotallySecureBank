@@ -29,7 +29,6 @@ export default {
   },
   watch: {
     value(newValue) {
-      console.log("Watch value: " + newValue)
       this.selectedReceiverBankAccount = newValue;
     }
   },
@@ -39,12 +38,10 @@ export default {
         this.isCustomInput = true;
         this.customInput = '';
       } else {
-        console.log("SelectChange: " + this.selectedReceiverBankAccount)
         this.$emit('input', this.selectedReceiverBankAccount);
       }
     },
     handleInput() {
-      console.log("Input: " + this.customInput)
       this.$emit('input', this.customInput);
       if (this.customInput === '') {
         this.isCustomInput = false; 

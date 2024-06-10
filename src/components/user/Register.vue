@@ -43,7 +43,6 @@ export default {
                 axios
                     .post('users', this.user)
                     .then(response => {
-                        console.log(response);
                         window.location.href = "/TotallySecureBank/login";
                     })
                     .catch(error => {

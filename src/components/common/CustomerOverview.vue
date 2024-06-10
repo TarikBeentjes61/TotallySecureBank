@@ -36,13 +36,11 @@ export default {
                     this.errorMessage = ''
                 })
                 .catch(error => {
-                    console.log(error.response.data);
                     this.errorMessage = error.response.data;
                     this.users = [];
                 });
         },
         acceptUser(userId) {
-            console.log(this.users);
             axios.put('users/' + userId + '/activate', {
                 headers: {
                     'Content-Type': 'application/json'
@@ -50,10 +48,8 @@ export default {
             })
                 .then(result => {
                     this.getUsers();
-                    console.log(result);
                 })
                 .catch(error => {
-                    console.log(error);
                 });
         }
     }

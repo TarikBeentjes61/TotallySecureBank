@@ -22,7 +22,6 @@ export const userStore = defineStore('store', {
                 axios
                     .post("users/login", this.user)
                     .then(response => {
-                        console.log(response.data)
 
                         this.jwt = response.data.token;
                         this.username = response.data.username;

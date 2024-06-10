@@ -27,12 +27,10 @@ export default {
         axios
             .get("users/" + this.bankAccounts[0].userId + "/details")
             .then(response => {
-                console.log(response.data);
                 this.user = response.data;
             })
             .catch(error => {
                 this.errorMessage = error.response;
-                console.log(error);
             });
     }
 };

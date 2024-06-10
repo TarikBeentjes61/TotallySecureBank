@@ -11,6 +11,7 @@ export default {
         return {
             IBAN: "",
             absoluteLimit: 0,
+            errorMessage: ''
         };
     },
     methods: {
@@ -18,9 +19,11 @@ export default {
             axios
             .put("http://localhost:8080/accounts/" + this.IBAN + "/absoluteLimit?limit=" + this.absoluteLimit) 
             .then((result) => {
-                console.log("success");
+                this.errorMessage = "";
             })
-            .catch((error) => console.log(error));
+            .catch((error) => {
+                this.errorMessage = error.response.data;
+            });
         }
      }
 };

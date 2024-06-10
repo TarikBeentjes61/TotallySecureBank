@@ -25,11 +25,9 @@ export default {
       })
         .then(result => {
           this.accounts = result.data;
-          console.log(result);
           this.errorMessage = "";
         })
         .catch(error => {
-          console.log(error);
           this.errorMessage = error.response;
         });
     }
