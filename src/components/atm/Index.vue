@@ -76,7 +76,7 @@ export default {
             <div class="alert alert-danger" role="alert" v-if="this.errorMessage != ''">
                 {{ this.errorMessage }}
             </div>
-            <h1 class="text-center">ATM 4</h1>
+            <h1 class="text-center">ATM</h1>
             <div class="input-group mb-3">
                 <span class="input-group-text" id="basic-addon2">&euro;</span>
                 <input type="number" class="form-control" aria-describedby="basic-addon2" min="0.00"
